@@ -27,6 +27,7 @@
 
 #include "modules/grid.css.c"
 #include "modules/base.css.c"
+#include "modules/typography.css.c"
 #include "modules/links.css.c"
 #include "modules/buttons.css.c"
 #include "modules/forms.css.c"
