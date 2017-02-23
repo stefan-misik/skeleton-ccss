@@ -3,17 +3,13 @@
 #
 # Author: Stefan Misik (mail@stefanmisik.eu)
 
-# Tools
-CC_PRE	= $(CC) -E
-
-
 ## Parameters
 # C preprocessor sources
-SRC         = main.css.c
-
+SRC         = skeleton.css.c normalize.css.c
 
 ################################################################################
 CSS    = $(SRC:.css.c=.css)
+DEPS   = $(SRC:.css.c=.d)
 	
 
 ################################################################################
@@ -22,9 +18,17 @@ CSS    = $(SRC:.css.c=.css)
 all: $(SKEL_DIR) $(CSS)
 
 %.css: %.css.c
-	$(CC_PRE) -x c -P $< > $@
+	$(CC) -E -x c -P $< > $@
+
+%.d: %.css.c
+	$(CC) -MM -x c -MF $@ -MT $(<:.c=) $<
 
 clean:
-	$(RM) $(CSS)
+	$(RM) $(CSS) $(DEPS)
 
 .PHONY: all clean
+
+# Pull in dependency info, if not cleaning
+ifneq ($(MAKECMDGOALS),clean)
+-include $(DEPS)
+endif

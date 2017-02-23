@@ -1,2 +1,6 @@
+# NetBeans project
+nbproject/
+
 # CSS output
 *.css
+*.d
