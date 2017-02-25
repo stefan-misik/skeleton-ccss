@@ -1,6 +1,6 @@
 /* Links
 -------------------------------------------------- */
 a {
-  color: #1EAEDB; }
+  color: SKEL_PRIMARY_ACTIVE_COLOR; }
 a:hover {
-  color: #0FA0CE; }
+  color: SKEL_PRIMARY_COLOR; }

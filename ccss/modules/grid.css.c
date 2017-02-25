@@ -3,7 +3,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: SKEL_CONTAINER_WIDTH;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -14,19 +14,20 @@
   box-sizing: border-box; }
 
 /* For devices larger than 400px */
-@media (LARGER_THAN_MOBILE) {
+@media (SKEL_LARGER_THAN_MOBILE) {
   .container {
-    width: 85%;
+    width: SKEL_CONTAINER_WIDTH_LARGER_THAN_MOBILE;
     padding: 0; }
 }
 
 /* For devices larger than 550px */
-@media (LARGER_THAN_PHABLET) {
+@media (SKEL_LARGER_THAN_PHABLET) {
   .container {
-    width: 80%; }
+    width: SKEL_CONTAINER_WIDTH_LARGER_THAN_PHABLET; }
   .column,
   .columns {
     margin-left: 4%; }
+
   .column:first-child,
   .columns:first-child {
     margin-left: 0; }

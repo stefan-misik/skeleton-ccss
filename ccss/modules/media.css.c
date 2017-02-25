@@ -9,16 +9,16 @@ section and style it there.
 
 
 /* Larger than mobile */
-@media (LARGER_THAN_MOBILE) {}
+@media (SKEL_LARGER_THAN_MOBILE) {}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (LARGER_THAN_PHABLET) {}
+@media (SKEL_LARGER_THAN_PHABLET) {}
 
 /* Larger than tablet */
-@media (LARGER_THAN_TABLET) {}
+@media (SKEL_LARGER_THAN_TABLET) {}
 
 /* Larger than desktop */
-@media (LARGER_THAN_DESKTOP) {}
+@media (SKEL_LARGER_THAN_DESKTOP) {}
 
 /* Larger than Desktop HD */
-@media (LARGER_THAN_DESKTOPHD) {}
+@media (SKEL_LARGER_THAN_DESKTOPHD) {}
